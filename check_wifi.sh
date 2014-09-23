@@ -16,7 +16,7 @@ if [ "$SSID" != "$SAVED" ]; then
 	/usr/local/bin/imagesnap "${FILEPATH}photos/${DATE}${SSID}.jpg"
 	echo "$SSID" > "$FILE"
 	sleep 5
-#	python "${FILEPATH}tumblr.py" $SSID
+#	python "${FILEPATH}tumblr.py" $DATE $SSID
 fi
 
 exit 0

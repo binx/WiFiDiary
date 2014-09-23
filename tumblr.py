@@ -13,4 +13,4 @@ client = pytumblr.TumblrRestClient(
     OATH_SECRET
 )
 
-client.create_photo('TUMBLRURL', state="published", data="/path/to/repo/photos/"+sys.argv[1]+".jpg", caption=sys.argv[1])
+client.create_photo('TUMBLRURL', state="published", data="/path/to/repo/photos/"+sys.argv[1]+sys.argv[2]+".jpg", caption=sys.argv[2])
