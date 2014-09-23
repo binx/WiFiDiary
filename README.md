@@ -1,8 +1,8 @@
 WiFiDiary
 =========
 ## Setup
-1. Install imagesnap
-	
+1. Install [imagesnap]
+(http://iharder.sourceforge.net/current/macosx/imagesnap/)	
 		brew install imagesnap
 	
 2. Set up your chron job
