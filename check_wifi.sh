@@ -5,6 +5,11 @@ SSID=${SSID//[[:blank:]]/}
 
 FILEPATH="/path/to/repo/"
 
+if [ ! -d $FILEPATH ]; then
+    echo "The directory '$FILEPATH' does not exist. Please create it";
+    exit -1;
+fi
+
 FILE="${FILEPATH}SSID.txt"
 SAVED=`cat ${FILEPATH}SSID.txt`
 SAVED=${SAVED//[[:blank:]]/}
