@@ -11,7 +11,10 @@ if [ ! -d $FILEPATH ]; then
 fi
 
 FILE="${FILEPATH}SSID.txt"
-SAVED=`cat ${FILEPATH}SSID.txt`
+if [ -f $FILE ]; then
+    SAVED=`cat $FILE`
+fi
+
 SAVED=${SAVED//[[:blank:]]/}
 
 echo $SAVED
