@@ -14,7 +14,7 @@ This is an app to record the different places that you go to, through the lens o
 
 	I set mine up to run every 20 minutes:
 
-		0,20,40 * * * * cd /path/to/repo/ && check_wifi.sh
+		0,20,40 * * * * cd /path/to/repo/ && ./check_wifi.sh
 
 ## Optional Tumblr Upload
 
