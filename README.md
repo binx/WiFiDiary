@@ -6,15 +6,16 @@ This is an app to record the different places that you go to, through the lens o
 ## Setup
 1. Install [imagesnap]
 (http://iharder.sourceforge.net/current/macosx/imagesnap/)
+
 		brew install imagesnap
 
-2. Set up your chron job
+2. Set up your cron job  
 
 		$ crontab -e
 
-	I set mine up to run every 20 minutes:
+	I set mine up to run every 10 minutes:  
 
-		0,20,40 * * * * cd /path/to/repo/ && ./check_wifi.sh
+		*/10 * * * * cd /path/to/repo/ && ./check_wifi.sh
 
 ## Optional Tumblr Upload
 
