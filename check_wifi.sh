@@ -19,7 +19,8 @@ echo $SAVED
 
 if [ "$SSID" != "$SAVED" ]; then
 	DATE=$(date +"%Y%m%d%H%M")
-	/usr/local/bin/imagesnap "${FILEPATH}photos/${DATE}-${SSID}.jpg"
+	# Warm up the camera: '-w 1.0'
+	/usr/local/bin/imagesnap -w 1.0 "${FILEPATH}photos/${DATE}-${SSID}.jpg"
 	echo "$SSID" > "$FILE"
 	sleep 5
 #	python "${FILEPATH}tumblr.py" $DATE $SSID
