@@ -9,7 +9,7 @@ In MacOS Mojave and later (Big Sur, Catalina, etc) the security permissions have
 
 ### Install [imagesnap](https://github.com/rharder/imagesnap)
 
-		brew install imagesnap
+	brew install imagesnap
 
 ### Grant Application Permissions
 
@@ -51,7 +51,7 @@ Ok, here's where things go off the rails! Turns out MacOS would like to make it 
 	4. How often to run the script - this will run every 15 minutes.
 	```
 	<key>StartInterval</key>
-		<integer>15000</integer>
+	<integer>15000</integer>
 	```
 2. Save this file to `~/Library/LaunchAgents`. It is *very important* that you save it to your user-specific Library folder (aka `~/Library`) vs. the system-wide Library folder (`/Library`)
 3. If you don't have `launchctl` installed on your machine, you can [grab it here](https://webinstall.dev/serviceman/). The install program will also tell you if/how to update your $PATH variable.
