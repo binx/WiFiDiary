@@ -20,14 +20,15 @@ Under Security & Privacy > Full Disk Access, drag in the appliation icons for Te
 3. #### Set Up Automator Script
 	1. Open the Automator app
 	2. Select "New Application", then add Library > Run Shell Script
-	
-	!["adding script"](./tutorial/automator.png?raw=true "adding script")
 	3. Paste in the shell script from `sample_script.sh` with the proper pathname of where you cloned the repo.
 	4. Click "Run" (upper right corner) to test the script, and be sure to click "Allow" for granting Automator access to the Camera.
 	5. Check your `/photos` folder in your WiFiDiary folder, and verify that a photo has been taken. To have it run more than once, you'll need to change the text value in `SSID.text` to something other than your wifi name.
 
+	!["adding script"](./tutorial/automator.png?raw=true "adding script")
+
 4. #### Schedule the Script
 Ok, here's where things go off the rails! Turns out MacOS would like to make it difficult to run Automator apps more than once a day (which one can easily do with a calendar event! go figure). So now we will get into the world of `launchctl` and `.plist` files.
+
 	1. Take the `wifidiary.plist` file in the repo, we're going to fill in the appropriate values.
 		1. The string value here must be the name of the file.
 		```
