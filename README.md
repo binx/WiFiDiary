@@ -15,13 +15,13 @@ In MacOS Mojave and later (Big Sur, Catalina, etc) the security permissions have
 
 Under Security & Privacy > Full Disk Access, drag in the appliation icons for Terminal and Automator. ([Longer Explainer](https://osxdaily.com/2020/04/27/fix-cron-permissions-macos-full-disk-access/))
 
-![granting permissions](./tutorial/security)
+!["granting permissions"](./tutorial/security.png?raw=true "granting permissions")
 
 3. #### Set Up Automator Script
 	1. Open the Automator app
 	2. Select "New Application", then add Library > Run Shell Script
 	
-	![adding script](./tutorial/automator)
+	!["adding script"](./tutorial/automator.png?raw=true "adding script")
 	3. Paste in the shell script from `sample_script.sh` with the proper pathname of where you cloned the repo.
 	4. Click "Run" (upper right corner) to test the script, and be sure to click "Allow" for granting Automator access to the Camera.
 	5. Check your `/photos` folder in your WiFiDiary folder, and verify that a photo has been taken. To have it run more than once, you'll need to change the text value in `SSID.text` to something other than your wifi name.
