@@ -3,12 +3,7 @@
 SSID=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I | grep ' SSID' | cut -d ':' -f 2)
 SSID=${SSID//[[:blank:]]/}
 
-# Get path from argument (or use current path)
-FILEPATH=$1
-if [ -z "$FILEPATH" ]
-then
-	FILEPATH="./"
-fi
+FILEPATH="Documents/WiFiDiary/"
 
 FILE="${FILEPATH}SSID.txt"
 touch $FILE
@@ -19,8 +14,8 @@ echo $SAVED
 
 if [ "$SSID" != "$SAVED" ]; then
 	DATE=$(date +"%Y%m%d%H%M")
-	# Warm up the camera: '-w 1.0'
-	/usr/local/bin/imagesnap -w 1.0 "${FILEPATH}photos/${DATE}-${SSID}.jpg"
+	# imagesnap 0.2.13 warms up the camera for 3 seconds by default
+	/usr/local/bin/imagesnap "${FILEPATH}photos/${DATE}-${SSID}.jpg"
 	echo "$SSID" > "$FILE"
 	sleep 5
 #	python "${FILEPATH}tumblr.py" $DATE $SSID
